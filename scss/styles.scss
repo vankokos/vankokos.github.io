@@ -10,6 +10,10 @@
 
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .header {
     padding-top:35px;
 
@@ -210,7 +214,7 @@
 
                 &:hover {
                     background-color: rgba(69.0, 143.0, 246.0, 0.5);
-                    transform:scale(1.1);
+                    transform:scale(1.02);
                     transition: 0.4s;
                 }
 
@@ -486,19 +490,18 @@
 
         }
 
-        // &-vector {
-        //     background-image:url(../img/vector2.svg);
-        //     height:671px;
-        //     width:937px;
-        //     position:absolute;
-        //     transform: translate(770px, 100px);
-        //     opacity:92.66%;
-        //     z-index:-100;
-        //     background-repeat:no-repeat;
-        //     background-size: contain;
-        //     max-width: 100%;
-        // }
-        // из-за этого backgound-image поялвяется скролл внизу страницы, не знаю что сделать, overflow:hidden не работает
+        &-vector {
+            background-image:url(../img/vector2.svg);
+            height:671px;
+            width:937px;
+            position:absolute;
+            transform: translate(770px, 100px);
+            opacity:92.66%;
+            z-index:-100;
+            background-repeat:no-repeat;
+            background-size: contain;
+            max-width: 100%;
+        }
 
 
         &-title {
