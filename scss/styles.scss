@@ -806,6 +806,14 @@ body {
 
     .services {
         padding-top:20px;
+
+        &__dots {
+            display:none
+        }
+
+        &__vector {
+            display:none;
+        }
     }
 
     .providers {
@@ -830,12 +838,26 @@ body {
                 &-article {
                     padding-top:0px;
                 }
+
+                &-dots {
+                    display: none;
+                }
             }
         }
     }
 
     .article {
         padding-top:100px;
+
+        &__inner {
+            &-vector {
+                display: none;
+            }
+
+            &-dots2 {
+                display: none;
+            }
+        }
     }
 }
 
@@ -1143,6 +1165,25 @@ body {
 
             &-dots2 {
                 display: none;
+            }
+
+            &-grid {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &-item {
+                    width:320px;
+                    &-img {
+                        width:320px;
+                    }
+                    &-img2 {
+                        width:320px;
+                    }
+                    &-img3 {
+                        width:320px;
+                    }
+                }
             }
         }
     }
