@@ -1281,6 +1281,9 @@ body {
   .services__vector {
     display: none;
   }
+  .services__dots {
+    display: none;
+  }
   .article__inner-vector {
     display: none;
   }
