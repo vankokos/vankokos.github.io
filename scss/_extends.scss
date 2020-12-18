@@ -1,0 +1,33 @@
+%button {
+    outline:none;
+    border:1px solid #458FF6;
+    cursor:pointer;
+    background: white;
+    border-radius: 55px;
+    color:#458FF6;
+    font-family: $main-font;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 60px;
+    width:200px;
+    height:60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%button-hover {
+    color:white;
+    background-color:#458FF6;
+    transition:0.4s;
+}
+
+%title-after {
+    content:"";
+    border-bottom:2px solid black;
+    width: 56px;
+    display: block;
+    margin-top: 26px;
+    margin-bottom: 33px;
+}

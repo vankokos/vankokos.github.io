@@ -1,4 +1,5 @@
 @import "vars";
+@import "extends";
 
 * {
     box-sizing: border-box;
@@ -79,7 +80,7 @@ body {
 }
 
 .landing {
-
+    padding-top:85px;
     &__dots {
         background-image:url(../img/dots.svg);
         height:115px;
@@ -117,26 +118,10 @@ body {
             }
 
             &-btn {
-                outline:none;
-                border:1px solid #458FF6;
-                cursor:pointer;
-                background: white;
-                border-radius: 55px;
-                color:#458FF6;
-                font-family: $main-font;
-                font-weight: bold;
-                font-size: 18px;
-                line-height: 60px;
-                width:200px;
-                height:60px;
-                text-align: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @extend %button;
+
                 &:hover {
-                    color:white;
-                    background-color:#458FF6;
-                    transition:0.4s;
+                    @extend %button-hover
                 }
             }
         }
@@ -145,6 +130,7 @@ body {
             background-image:url(../img/illustration1.svg);
             height:598px;
             width:693px;
+            transform:translate(70px, 0px)
         }
     }
 }
@@ -193,12 +179,7 @@ body {
             flex-direction: column;
 
             &::after {
-                content:"";
-                border-bottom:2px solid black;
-                width: 56px;
-                display: block;
-                margin-top: 26px;
-                margin-bottom: 33px;
+                @extend %title-after
 
             }
         }
@@ -211,6 +192,7 @@ body {
             text-align: center;
             color: #7D7987;
             margin-bottom: 80px;
+            width:950px;
         }
 
         &-grid {
@@ -235,6 +217,7 @@ body {
                 align-items:flex-start;
                 position:relative;
                 transition:0.2s;
+                cursor:pointer;
 
                 &:hover {
                     background-color: rgba(69.0, 143.0, 246.0, 0.5);
@@ -271,27 +254,10 @@ body {
         }
 
         &-button {
-            outline:none;
-            border:1px solid #458FF6;
-            cursor:pointer;
-            background: white;
-            border-radius: 55px;
-            color:#458FF6;
-            font-family: $main-font;
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 60px;
-            width:200px;
-            height:60px;
-            display: flex;
-            text-align:center;
-            justify-content: center;
-            align-items: center;
+            @extend %button;
 
             &:hover {
-                color:white;
-                background-color:#458FF6;
-                transition:0.4s;
+                @extend %button-hover
             }
 
         }
@@ -300,6 +266,15 @@ body {
 
 .providers {
     padding-top:220px;
+    &__dots {
+        background-image: url(../img/dots.svg);
+        height:115px;
+        width:131px;
+        position:absolute;
+        background-repeat:no-repeat;
+        transform:translate(1300px, 530px);
+        z-index:-100;
+    }
 
     &__inner {
 
@@ -307,12 +282,22 @@ body {
             display: flex;
             justify-content: space-between; 
 
+            &-img {
+                transform: translate(-100px, 0px);
+            }
+
+            &-img2 {
+                transform:translate(130px, 0px)
+            }
+
             &:first-child {
                 margin-bottom: 220px;
+                padding-right: 40px;
             }
 
             &:last-child {
                 flex-direction: row-reverse;
+                padding-left:40px;
             }
 
             &-article {
@@ -326,12 +311,7 @@ body {
                     color: #000000;
 
                     &::after {
-                        content:"";
-                        border-bottom:3px solid black;
-                        width: 56px;
-                        display: block;
-                        margin-top: 26px;
-                        margin-bottom: 31px;
+                        @extend %title-after
                     }
                 }
 
@@ -346,27 +326,10 @@ body {
                 }
 
                 &-button {
-                    outline:none;
-                    border:1px solid #458FF6;
-                    cursor:pointer;
-                    background: white;
-                    border-radius: 55px;
-                    color:#458FF6;
-                    font-family: $main-font;
-                    font-weight: bold;
-                    font-size: 18px;
-                    line-height: 60px;
-                    width:200px;
-                    height:60px;
-                    display: flex;
-                    text-align:center;
-                    justify-content: center;
-                    align-items: center;
+                    @extend %button;
         
                     &:hover {
-                        color:white;
-                        background-color:#458FF6;
-                        transition:0.4s;
+                        @extend %button-hover;
                     }
 
                     &-arrow {
@@ -430,12 +393,8 @@ body {
                 align-items: center;
 
                 &::after {
-                    content:"";
-                    border-bottom:3px solid white;
-                    width: 56px;
-                    display: block;
-                    margin-top: 26px;
-                    margin-bottom: 31px;
+                    @extend %title-after;
+                    border-bottom:2px solid white;
                 }
             }
 
@@ -541,12 +500,7 @@ body {
             align-items:center;
 
             &::after {
-                content:"";
-                border-bottom:3px solid black;
-                width: 56px;
-                display: block;
-                margin-top: 26px;
-                margin-bottom: 79px;
+                @extend %title-after;
             }
         }
 
@@ -651,26 +605,9 @@ body {
         }
 
         &-button {
-            outline:none;
-            border:1px solid #458FF6;
-            cursor:pointer;
-            background: white;
-            border-radius: 55px;
-            color:#458FF6;
-            font-family: $main-font;
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 60px;
-            width:200px;
-            height:60px;
-            display: flex;
-            text-align:center;
-            justify-content: center;
-            align-items: center;
+            @extend %button;
             &:hover {
-                color:white;
-                background-color:#458FF6;
-                transition:0.4s;
+                @extend %button-hover;
             }
         }
     }
@@ -818,6 +755,10 @@ body {
 
     .providers {
         padding-top:100px;
+
+        &__dots {
+            display: none;
+        }
         &__inner {
             &-item {
                 &-img {
@@ -969,6 +910,10 @@ body {
                     }
                 }
             }
+
+            &-article-small {
+                width:600px;
+            }
         }
     }
 
@@ -1003,6 +948,22 @@ body {
                     opacity:0.1;
                     position:absolute;
                     z-index:-100;
+                    transform:translate(0px, 0px)
+                }
+
+                &-img2 {
+                    opacity:0.1;
+                    position:absolute;
+                    z-index:-100;
+                    transform:translate(0px, 0px)
+                }
+
+                &:first-child {
+                    padding-right: 0px;
+                }
+    
+                &:last-child {
+                    padding-left:0px;
                 }
             }
         }
@@ -1049,6 +1010,18 @@ body {
         width:500px;
     }
 
+    .landing__inner-right {
+        display: none;
+    }
+
+    .providers__inner-item-img {
+        display: none;
+    }
+
+    .providers__inner-item-img2 {
+        display: none;
+    }
+
     .services {
         &__inner {
             &-grid {
@@ -1057,6 +1030,10 @@ body {
                 grid-template-rows: repeat(1, 1fr);
                 gap:58px;
                 padding-bottom:69px;
+            }
+
+            &-article-small {
+                width:300px;
             }
         }
     }
@@ -1107,6 +1084,7 @@ body {
                 background-color: rgba(54, 82, 118, 0.4);
                 padding:20px;
                 border-radius:50px;
+                width:200px;
             }
 
             &-article {
@@ -1198,6 +1176,10 @@ body {
                     display: none;
                 }
 
+                &-img2 {
+                    display: none;
+                }
+
                 &-article {
                     padding-top: 10px;
                 }
@@ -1211,6 +1193,13 @@ body {
 
     .article {
         padding-top: 60px;
+    }
+}
+
+@media (max-width:350px) {
+    .container {
+        width:300px;
+        
     }
 }
 
